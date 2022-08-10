@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+FEM/data.json
+FEM/design/active-states.jpg
+FEM/design/desktop-design.jpg
+FEM/design/desktop-preview.jpg
+FEM/design/mobile-design.jpg
+FEM/images/favicon-32x32.png
+FEM/images/icon-ellipsis.svg
+FEM/images/icon-exercise.svg
+FEM/images/icon-play.svg
+FEM/images/icon-self-care.svg
+FEM/images/icon-social.svg
+FEM/images/icon-study.svg
+FEM/images/icon-work.svg
+FEM/images/image-jeremy.png
+FEM/index.html
+FEM/README-template.md
+FEM/README.md
+FEM/style-guide.md
