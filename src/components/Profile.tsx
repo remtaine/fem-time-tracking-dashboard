@@ -1,37 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Avatar from "../images/image-jeremy.png";
+import TimePeriodButton from "./ui/TimePeriodButton";
 
 function Profile(props: any) {
+  const [active, setActive] = useState("Weekly");
+  const changeActive = function () {};
   return (
-    <div className="row-span-2 rounded-xl bg-fem-800 w-40 h-80">
-      <div className="bg-fem-900 p-4 rounded-xl h-52 flex flex-col justify-around">
+    <div className="row-span-2 rounded-xl bg-fem-800 w-52 min-h-full">
+      <div className="bg-fem-550 p-4 rounded-xl h-72 flex flex-col justify-start gap-12">
         <img
           src={Avatar}
           alt=""
-          className="rounded-full w-12 border-solid border-4 border-white"
+          className="rounded-full w-16 border-solid border-[3px] border-white"
         />
         <div className="">
           <div className="text-fem-950">Report for</div>
-          <div className="text-2xl ">Jeremy</div>
-          <div className="text-2xl ">Robson</div>
+          <div className="text-4xl ">Jeremy</div>
+          <div className="text-4xl -translate-y-4">Robson</div>
         </div>
       </div>
-      <ul className="flex flex-col gap-1 pl-4 py-4 text-sm">
-        <li className="text-fem-900 hover:text-neutral-50 duration-400">
-          <button className="">Daily</button>
+      <ul className="flex flex-col gap-2 pl-4 py-4 text-base mt-1">
+        <li className="">
+          <TimePeriodButton text="Daily" />
         </li>
-        <li className="text-fem-900 hover:text-neutral-50 duration-400">
-          <button className="">Weekly</button>
+        <li className="">
+          <TimePeriodButton text="Weekly" />
         </li>
-        <li className="text-fem-900 hover:text-neutral-50 duration-400">
-          <button className="">Monthly</button>
+        <li className="">
+          <TimePeriodButton text="Monthly" />
         </li>
       </ul>
     </div>
   );
 }
 
-Profile.propTypes = {};
+Profile.propTypes = {
+  active: PropTypes.string,
+};
+
+Profile.defaultProps = {
+  active: "Daily",
+};
 
 export default Profile;
