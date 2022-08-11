@@ -1,0 +1,1 @@
+Don't know how to hover on ellipsis button without hovering over the entire square. Right now when the ellipsis button changes color, the activity dashboard changes as well.
