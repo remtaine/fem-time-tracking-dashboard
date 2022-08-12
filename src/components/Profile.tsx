@@ -4,8 +4,6 @@ import Avatar from "../images/image-jeremy.png";
 import TimePeriodButton from "./ui/TimePeriodButton";
 
 function Profile(props: any) {
-  const [active, setActive] = useState("Weekly");
-  const changeActive = function () {};
   return (
     <div className="row-span-2 rounded-xl bg-fem-800 w-52 min-h-full">
       <div className="bg-fem-550 p-4 rounded-xl h-72 flex flex-col justify-start gap-12">
