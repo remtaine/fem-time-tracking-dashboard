@@ -12,12 +12,9 @@ function Profile(props: any) {
           alt=""
           className="rounded-full w-16 h-16 border-solid border-[3px] border-white"
         />
-        <div className="">
+        <div className="flex flex-col gap-2">
           <div className="text-fem-950">Report for</div>
-          <div className=" flex flex-row xl:flex-col gap-1 xl:gap-0 text-xl xl:text-4xl">
-            <div className="">Jeremy</div>
-            <div className="xl:-translate-y-4">Robson</div>
-          </div>
+          <div className="text-xl xl:text-4xl leading-none">Jeremy Robson</div>
         </div>
       </div>
       <ul className="flex flex-row justify-evenly xl:flex-col gap-2 xl:pl-4 py-4 text-base mt-1">
