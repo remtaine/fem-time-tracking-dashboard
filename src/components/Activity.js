@@ -42,21 +42,26 @@ function Activity(props) {
   return (
     <div className="relative">
       <div
-        className={"w-52 h-52 rounded-t-lg rounded-b-xl" + bgData[title].color}
+        className={
+          "w-[350px] xl:w-52 h-44 xl:h-52 rounded-t-lg rounded-b-xl" +
+          bgData[title].color
+        }
       >
         <img src={bgData[title].img} alt="" className="ml-auto mr-3" />
       </div>
-      <div className="absolute bottom-0 bg-fem-800 w-52 h-40 z-50 rounded-lg p-4 flex flex-col gap-2 cursor-pointer hover:bg-fem-575 duration-300">
+      <div className="absolute bottom-0 bg-fem-800 w-[350px] xl:w-52 h-32 xl:h-40 z-50 rounded-lg p-4 flex flex-col gap-2 cursor-pointer hover:bg-fem-575 duration-300">
         <div className="flex justify-between">
           <h2 className="font-medium">{title}</h2>
           <button className="hover:text-white text-fem-950 duration-400">
             <i className="fa-solid fa-ellipsis text-2xl"></i>
           </button>
         </div>
-        <h3 className="font-light text-5xl">{current + "hrs"}</h3>
-        <h4 className="text-xs text-fem-950">
-          {"Last Week - " + past + "hrs"}
-        </h4>
+        <div className="flex flex-row xl:flex-col justify-between items-center xl:items-start">
+          <h3 className="font-light text-5xl">{current + "hrs"}</h3>
+          <h4 className="text-xs text-fem-950 ">
+            {"Last Week - " + past + "hrs"}
+          </h4>
+        </div>
       </div>
     </div>
   );
