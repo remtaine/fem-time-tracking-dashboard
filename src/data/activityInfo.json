@@ -1,0 +1,26 @@
+[
+    Work: {
+      color: " bg-fem-100 ",
+      img: WorkImg,
+    },
+    Play: {
+      color: " bg-fem-200 ",
+      img: PlayImg,
+    },
+    Study: {
+      color: " bg-fem-300 ",
+      img: StudyImg,
+    },
+    Exercise: {
+      color: " bg-fem-400 ",
+      img: ExerciseImg,
+    },
+    Social: {
+      color: " bg-fem-500 ",
+      img: SocialImg,
+    },
+    "Self Care": {
+      color: " bg-fem-600 ",
+      img: SelfCareImg,
+    },
+]
