@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import Avatar from "../images/image-jeremy.png";
 import TimePeriodButton from "./ui/TimePeriodButton";
+import { UserContext } from "../App";
 
-function Profile(props: any) {
+function Profile(props) {
+  // const { onClickFx } = props;
+  // const value = useContext(UserContext);
+
   return (
     <div className="row-span-2 rounded-xl bg-fem-800 w-[350px] xl:w-52 min-h-full">
       <div className="bg-fem-550 p-4 rounded-xl xl:h-72 flex  flex-row xl:flex-col items-center xl:items-start justify-start gap-6 xl:gap-12">
@@ -34,6 +38,7 @@ function Profile(props: any) {
 
 Profile.propTypes = {
   active: PropTypes.string,
+  onClickFx: PropTypes.func,
 };
 
 Profile.defaultProps = {

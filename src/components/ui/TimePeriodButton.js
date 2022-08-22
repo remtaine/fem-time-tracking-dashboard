@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
+import { Context } from "../../App";
 
-function TimePeriodButton(props: any) {
+function TimePeriodButton(props) {
   const { text } = props;
-  const [isActive, setIsActive] = useState(false);
-  const toggleIsActive = function () {
-    setIsActive(true);
-  };
+
   return (
     <button
       className={
         "hover:text-neutral-50 duration-400 text-lg" +
         " " +
-        (isActive ? "text-neutral-50" : "text-fem-900")
+        (true ? "text-neutral-50" : "text-fem-900")
       }
-      onClick={toggleIsActive}
+      onClick={() => {}}
     >
       {text}
     </button>
@@ -23,6 +21,7 @@ function TimePeriodButton(props: any) {
 
 TimePeriodButton.propTypes = {
   text: PropTypes.string,
+  onClickFx: PropTypes.func,
 };
 
 export default TimePeriodButton;
