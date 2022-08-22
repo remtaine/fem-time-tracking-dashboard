@@ -2,7 +2,7 @@ import React, { useState, useEffect, createContext } from "react";
 import ActivityDashboard from "./components/ActivityDashboard";
 import Profile from "./components/Profile";
 
-export const Context = createContext({});
+export const Context = createContext();
 
 function App() {
   const [timePeriod, setTimePeriod] = useState("Weekly");
