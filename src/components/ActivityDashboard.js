@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Activity from "./Activity";
 import PropTypes from "prop-types";
+import { Context } from "../App";
 
 function ActivityDashboard(prop) {
-  const { timePeriod } = prop;
+  const { timePeriod, setTimePeriod } = useContext(Context);
   const data = require("../data/data.json");
 
+  console.log(timePeriod);
   console.log(data);
   return (
     <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
@@ -26,8 +28,8 @@ function ActivityDashboard(prop) {
           return (
             <Activity
               title={datum["title"]}
-              current={datum["timeframes"][timePeriod].current}
-              past={datum["timeframes"][timePeriod].previous}
+              current={datum["timeframes"][timePeriod.toLowerCase()].current}
+              past={datum["timeframes"][timePeriod.toLowerCase()].previous}
               // past={datum["timeframes"]}
               key={index}
             />
