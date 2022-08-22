@@ -37,7 +37,7 @@ function Activity(props) {
     },
   };
 
-  console.log(bgData[title]);
+  // console.log(bgData[title]);
 
   return (
     <div className="relative">
